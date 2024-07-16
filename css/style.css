@@ -1,0 +1,346 @@
+/*------------ Start Global ----------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/*------------------- CSS Variables -------------------*/
+:root {
+  --orange-color: rgb(244, 108, 59);
+  --scrollbar-background: rgb(118, 117, 117);
+  --White-color: #ffff;
+}
+/*------------------- Scrollbar -------------------*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--orange-color);
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-background);
+}
+/********* Text-Selection **********/
+::selection{
+    color: var(--White-color);
+    background-color: var(--orange-color);
+}
+/********* Clear **************/
+.clear-fix {
+  clear: both;
+}
+/********* container **************/
+.container{
+  width: 90%;
+  margin: auto;
+}
+/********* Title ***********************/
+.title{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  margin: 40px;
+  color: var(--orange-color);
+  border-bottom: 2px solid gray;
+}
+/*------------ End Global ----------------*/
+
+/*------------ Start Logo Section ----------------*/
+#logo-section {
+  padding: 1%;
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+}
+#logo-section .logo {
+  width: 50%;
+  text-align: left;
+  display: flex;
+  color: var(--orange-color);
+  font-size: 25px;
+}
+#logo-section .call {
+  width: 50%;
+  text-align: right;
+  font-size: 22px;
+}
+/*------------ End Logo Section ----------------*/
+
+/*------------ Start NavBar ----------------*/
+#navbar {
+  background-color: var(--orange-color);
+  padding: 20px 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+#navbar .menu {
+  float: left;
+}
+#navbar .menu li {
+  display: inline-block;
+  padding-inline: 5px;
+}
+#navbar .menu a {
+  color: var(--White-color);
+  transition: color 1s;
+}
+#navbar .menu li a:hover{
+    color: gold;
+}
+#navbar .social {
+  float: right;
+}
+#navbar .social li {
+  display: inline-block;
+  padding-inline: 5px;
+}
+#navbar .social a {
+  padding-inline: 5px;
+  color: var(--White-color);
+  transition: color 1s;
+}
+#navbar .social li a:hover{
+    color: gold;
+}
+/*------------ End NavBar ----------------*/
+
+/*------------ Start Home ----------------*/
+#home {
+  background-image: linear-gradient(to right, #00000069, #00000069), url("../images/bg.jpg");
+  background-position: center;
+  min-height: 100vh;
+  background-size: cover;
+  overflow: auto;
+}
+#home .caption{
+  text-align: center;
+}
+#home .caption span {
+  color: var(--orange-color);
+}
+#home .caption h1,
+#home .caption p,
+#home .caption button {
+  color: var(--White-color);
+}
+#home .caption h1 {
+  margin-top: 12%;
+  padding-block: 1%;
+  font-size: 40px;
+}
+#home .caption p {
+  padding-block: 1%;
+  padding-inline: 20%;
+  font-size: 2rem;
+}
+#home .caption button {
+  /* border: var(--White-color) double 6px; */
+  border: var(--White-color) solid 2px;
+  outline: var(--White-color) solid 2px;
+  outline-offset: -7px;
+  padding: 1%;
+  background-color: transparent;
+  font-size: 20px;
+  transition: outline-offset 1s, background-color 1s;
+}
+#home .caption button:hover{
+    background-color: var(--orange-color);
+    outline-offset: 2px;
+    cursor: pointer;
+}
+/*------------ End Home ----------------*/
+
+/*------------ Start About ----------------*/
+#about{
+  font-family: "Roboto", sans-serif;
+}
+#about .description{
+  margin-top: 5%;
+  width: 80%;
+  float: left;
+  padding-inline: 20px;
+}
+#about .description h3{
+  font-size: 22px;
+  margin-block: 10px;
+  color: var(--orange-color);
+}
+#about .description p{
+  line-height: 30px;
+  padding-block-end: 25px;
+}
+#about .description button{
+  padding: 10px;
+  border: var(--orange-color) solid 2px;
+  outline: var(--orange-color) solid 2px;
+  outline-offset: -7px;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+#about .description button:hover{
+  outline-offset: 2px;
+  background-color: var(--orange-color);
+  color: var(--White-color);
+}
+#about .about-img{
+  width: 20%;
+  float: right;
+}
+#about .about-img img{
+  width: 100%;
+}
+/*------------ End About ----------------*/
+
+/*------------ Start Popular Dishes --------------------*/
+#dishes{
+  background-color: #f4f6f7e8;
+  padding-block: 40px;
+}
+#dishes .menu{
+  text-align: center;
+  margin-bottom: 50px;
+}
+#dishes .menu li{
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  text-transform: capitalize;
+  margin: 0 10px;
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+#dishes .menu .active{
+  color: var(--orange-color);
+  border-color:  var(--orange-color);
+}
+#dishes .menu li:hover{
+  color: var(--orange-color);
+  border-color:  var(--orange-color);
+}
+#dishes .item{
+  width: calc(100% / 3);
+  color: gray;
+  padding: 20px;
+  float: left;
+}
+#dishes .item:hover{
+  box-shadow: 0px 0px 2px #000;
+}
+#dishes .item .item-area{
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 5px;
+}
+#dishes .item-area img{
+  width: 100%;
+}
+#dishes .text h3{
+  font-size: 30px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+#dishes .text h3:hover{
+  color: rgb(94, 94, 94);
+}
+/*------------ End Popular Dishes --------------------*/
+
+/*------------ Start Orders --------------------*/
+#orders .item{
+  width: 48%;
+  float: left;
+  padding-block: 12%;
+  border-radius: 30px;
+  padding-inline: 20px;
+  text-align: center;
+  color: var(--White-color);
+  margin: .625rem;
+  text-transform: capitalize;
+}
+#orders .item h3{
+  font-size: 1.875rem;
+  transition: all 0.5s;
+}
+#orders .item h3:hover{
+  color: tomato;
+}
+#orders .item p{
+  letter-spacing: 1px;
+}
+#orders .item1{
+  background-image: url('../images/img3.jpg');
+  background-position: center center;
+  background-size: 100% 100%;
+}
+#orders .item2{
+  background-image: url('../images/img4.jpg');
+  background-position: center center;
+  background-size: 100% 100%;
+}
+/*------------ End Orders --------------------*/
+
+/*------------ Start Chefs --------------------*/
+#chefs .item{
+  width: 23%;
+  float: left;
+  margin-inline: 1%;
+  margin-block: 2%;
+  position: relative;
+}
+#chefs .item img{
+  width: 100%;
+}
+#chefs .blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #7C7978;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#chefs .blur p{
+  color: aliceblue;
+  font-size: 20px;
+  text-align: center;
+} 
+#chefs .item:hover .blur{
+  opacity: 0.5;
+}
+/*------------ End Chefs --------------------*/
+
+/*------------ Start Icons --------------------*/
+#icons{
+  padding: 60px;
+  background-color: #f4f6f7e8;
+}
+#icons .item{
+  width: calc(100% / 4);
+  float: left;
+  text-align: center;
+  color: #555;
+  transition: all 1s;
+  padding-block: 20px;
+}
+#icons .item i{
+  font-size: 2.1875rem;
+  color: var(--orange-color);
+  transition: all 1s;
+}
+#icons .item h3{
+  text-transform: capitalize;
+  padding: 15px;
+}
+#icons .item p{
+  text-transform: capitalize;
+  line-height: 25px;
+}
+#icons .item:hover{
+  background-color: var(--orange-color);
+  color: var(--White-color);
+}
+#icons .item:hover i{
+  color: var(--White-color);
+  transform: scale(1.5);
+}
+/*------------ End Icons --------------------*/
